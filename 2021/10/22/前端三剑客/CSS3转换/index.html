@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>css3转换 | 柒楠de小窝</title><meta name="keywords" content="css3"><meta name="author" content="qinan"><meta name="copyright" content="qinan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="**转换(tranform)**是CSS3中具有颠覆性的特征之一，可以实现元素的位移，旋转、缩放的效果 2D转换二维坐标系  移动translate，类似于定位 语法  1234transform: translate(x,y);或transform: translateX(n);transform: translateY(n);  (目前学到的移动盒子位置的方法有：定位，盒子外边距，2d转换移动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css3转换">
+<meta property="og:url" content="http://example.com/2021/10/22/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/CSS3%E8%BD%AC%E6%8D%A2/index.html">
+<meta property="og:site_name" content="柒楠de小窝">
+<meta property="og:description" content="**转换(tranform)**是CSS3中具有颠覆性的特征之一，可以实现元素的位移，旋转、缩放的效果 2D转换二维坐标系  移动translate，类似于定位 语法  1234transform: translate(x,y);或transform: translateX(n);transform: translateY(n);  (目前学到的移动盒子位置的方法有：定位，盒子外边距，2d转换移动">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/default8.jpg">
+<meta property="article:published_time" content="2021-10-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-01T09:56:31.179Z">
+<meta property="article:author" content="qinan">
+<meta property="article:tag" content="css3">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/default8.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/10/22/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/CSS3%E8%BD%AC%E6%8D%A2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'css3转换',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-01 17:56:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/default8.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">柒楠de小窝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">css3转换</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-21T16:00:00.000Z" title="发表于 2021-10-22 00:00:00">2021-10-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-01T09:56:31.179Z" title="更新于 2022-06-01 17:56:31">2022-06-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="css3转换"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>**转换(tranform)**是CSS3中具有颠覆性的特征之一，可以实现元素的位移，旋转、缩放的效果</p>
+<h3 id="2D转换"><a href="#2D转换" class="headerlink" title="2D转换"></a>2D转换</h3><p>二维坐标系<br><img src="https://img-blog.csdnimg.cn/8e448a8c3884439a83f455b639ea5feb.png" alt="在这里插入图片描述"></p>
+<ol>
+<li><p>移动translate，类似于定位<br> 语法</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate</span>(x,y);</span><br><span class="line">或</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">translateX</span>(n);</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">translateY</span>(n);</span><br></pre></td></tr></table></figure>
+<p> (目前学到的移动盒子位置的方法有：定位，盒子外边距，2d转换移动)</p>
+<ul>
+<li>translate最大优点：<strong>不会影响到其他元素的位置</strong></li>
+<li>值为百分比时是相对于自身来说的</li>
+<li>对行内标签没有效果</li>
+<li>应用：hover过渡效果</li>
+</ul>
+<p> 小技巧：结合定位使盒子水平居中，使用translate(-50%,-50%),代替原本要水平居中所使用的到的外边距</p>
+</li>
+<li><p>旋转 rotate<br> 语法</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>:<span class="built_in">rotate</span>(度数);</span><br></pre></td></tr></table></figure>
+<p> 重点：</p>
+<ul>
+<li>单位是deg,如rotate(45deg)</li>
+<li>角度为正时，顺市政，角度为负时，逆时针</li>
+<li>默认旋转中心点事元素的中心点<br>  转换中心点<br>  transform-origin: x y; (空格隔开，默认50% 50%, 可以设置像素或方位名词)</li>
+</ul>
+</li>
+<li><p>缩放 scale<br> 语法</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>:<span class="built_in">scale</span>(x,y);</span><br></pre></td></tr></table></figure>
+<p> 重点</p>
+<ul>
+<li>值为数字不跟单位</li>
+<li>1就是1倍即不变，2是2倍，0.5是缩小一半</li>
+<li>等比例缩放：(1)同时修改x,y（2）只写一个参数代表x，y默认和第一个参数一样</li>
+<li>优势：不会影响其他盒子，而且可以变换缩放的中心点（transform-origin）</li>
+</ul>
+</li>
+<li><p>综合写法，以及顺序问题</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>：translate() rotate() scale();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其顺序会影响转换的效果，先旋转会改变坐标轴的位置</li>
+<li>但我们同事有位移和其他属性时，记得要将位移放到最前</li>
+</ul>
+</li>
+</ol>
+<h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><p>动画（animation）可通过多个节点来精确控制一个或一组动画，常用来实现复杂的动画效果，作为学习3D转换的前提。<br>相较于过渡（transition），动画可以实现更多变化，更多控制，连续自动播放等效果。</p>
+<ol>
+<li><p>先用keyframes定义动画</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 定义动画 */</span>    /</span><br><span class="line"><span class="comment">/* 可以做多个状态的变化 */</span></span><br><span class="line">   <span class="comment">/* 百分比要整数 */</span></span><br><span class="line">   <span class="comment">/* 百分比是按时间来划分的 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> 动画名称&#123;</span><br><span class="line">	<span class="number">0%</span>&#123;</span><br><span class="line">		<span class="attribute">width</span>：<span class="number">100px</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="number">100%</span>&#123;</span><br><span class="line">		<span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 重点</p>
+<ul>
+<li>0% 是开始状态，100%是结束状态</li>
+</ul>
+</li>
+<li><p>调用动画</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">   <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">   <span class="comment">/* 调用动画 */</span></span><br><span class="line">   <span class="attribute">animation-name</span>: move（动画名称）;</span><br><span class="line">   <span class="comment">/* 持续时间 */</span></span><br><span class="line">   <span class="attribute">animation-duration</span>: 持续时间;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>常用动画属性</p>
+<p> <img src="https://img-blog.csdnimg.cn/c7689f55701b4a7cafb73fadae53ff9a.png" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<p>速度曲线的小细节<br>steps(5)表示过程走了5步<br><img src="https://img-blog.csdnimg.cn/adf78390b2fa4f7fb0c8b8820f86446b.png" alt="在这里插入图片描述"></p>
+<ol start="5">
+<li>简写属性<br> animation: 动画名称 持续时间 运动曲线 何时播放 播放次数 是否反方向 动画起始或结束状态。前面两个不能省略<ul>
+<li>暂停动画animation-play-state: puased; 不在简写属性里，通常和鼠标经过等配合使用。</li>
+</ul>
+</li>
+</ol>
+<h3 id="3D转换"><a href="#3D转换" class="headerlink" title="3D转换"></a>3D转换</h3><p>特点：近大远小，物体后面遮挡不可见<br>三维坐标系<br><img src="https://img-blog.csdnimg.cn/450568645f6e43e2a9ce22da0161fab3.png" alt="在这里插入图片描述"><br>最常用的是3D旋转和3D位移</p>
+<ol>
+<li>3D位移：translate3d(x,y,z)<br> <img src="https://img-blog.csdnimg.cn/78ce0afcd3604d9581757c327361e21a.png" alt="在这里插入图片描述"><br> 简写中xyz是不能省略的，如果没有就写0</li>
+<li>3D旋转：rotate3d(x,y)<br>左手准则<br><img src="https://img-blog.csdnimg.cn/f6f12dfa4d944eee9f689f8f83d66eef.png" alt="在这里插入图片描述"></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/90ec056d776c45aab826a926882f2b9a.png" alt="在这里插入图片描述"></p>
+<ol start="3">
+<li>透视：perspective<ul>
+<li>模拟人的视觉位置</li>
+<li>也称为视距，视距就是人的眼睛到屏幕的距离</li>
+<li>单位是像素</li>
+<li>透视写到被观察的父盒子上	<img src="https://img-blog.csdnimg.cn/20d7c5a1e2104fefb4e668abb309e6ad.png" alt="在这里插入图片描述"></li>
+</ul>
+</li>
+<li>. 3D呈现：transform-style</li>
+</ol>
+<p>实现从左到右<br><img src="https://img-blog.csdnimg.cn/0deed731e12548168e1198f62b0be339.png" alt="在这里插入图片描述"></p>
+<ul>
+<li>控制子元素是否开启三维立体环境</li>
+<li>transform-style:flat子元素默认不开启</li>
+<li>transform-style:preserve-3d;子元素开启立体空间</li>
+<li>代码写给父级，但影响的是子盒子</li>
+<li>这个属性很重要，后面要用</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">qinan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/10/22/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/CSS3%E8%BD%AC%E6%8D%A2/">http://example.com/2021/10/22/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/CSS3%E8%BD%AC%E6%8D%A2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">柒楠de小窝</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css3/">css3</a></div><div class="post_share"><div class="social-share" data-image="/img/default8.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/11/03/%E8%A7%84%E8%8C%83/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%B5%81%E7%A8%8B/"><img class="prev-cover" src="/img/default2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">搭建一个网站的流程</div></div></a></div><div class="next-post pull-right"><a href="/2021/10/18/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/CSS3%E6%96%B0%E5%A2%9E%E9%80%89%E6%8B%A9%E5%99%A8/"><img class="next-cover" src="/img/default4.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">css3新增选择器</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/10/18/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/CSS3%E6%96%B0%E5%A2%9E%E9%80%89%E6%8B%A9%E5%99%A8/" title="css3新增选择器"><img class="cover" src="/img/default4.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-18</div><div class="title">css3新增选择器</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">qinan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/qinanm"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/qinanm" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wenmumu_qinan@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">this is my blog, 大部分内容首发在csdn</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2D%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.</span> <span class="toc-text">2D转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB"><span class="toc-number">2.</span> <span class="toc-text">动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3D%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.</span> <span class="toc-text">3D转换</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/16/%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="无题"><img src="/img/default2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/07/16/%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="无题">无题</a><time datetime="2022-07-16T12:58:29.648Z" title="发表于 2022-07-16 20:58:29">2022-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/16/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="无题"><img src="/img/default2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/07/16/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="无题">无题</a><time datetime="2022-07-16T07:21:10.115Z" title="发表于 2022-07-16 15:21:10">2022-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/16/TypeScript/" title="无题"><img src="/img/default6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/07/16/TypeScript/" title="无题">无题</a><time datetime="2022-07-16T02:32:00.542Z" title="发表于 2022-07-16 10:32:00">2022-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/15/%E8%A7%84%E8%8C%83/%E8%AF%AD%E9%9B%80%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="无题"><img src="/img/default5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/07/15/%E8%A7%84%E8%8C%83/%E8%AF%AD%E9%9B%80%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="无题">无题</a><time datetime="2022-07-15T12:02:00.140Z" title="发表于 2022-07-15 20:02:00">2022-07-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/28/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/" title="hexo"><img src="/img/default3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo"/></a><div class="content"><a class="title" href="/2022/06/28/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/" title="hexo">hexo</a><time datetime="2022-06-27T16:00:00.000Z" title="发表于 2022-06-28 00:00:00">2022-06-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By qinan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
