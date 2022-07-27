@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>理解CSS | 青训营笔记 | 柒楠de小窝</title><meta name="keywords" content="CSS"><meta name="author" content="qinan"><meta name="copyright" content="qinan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="理解CSS | 青训营笔记这是我参与「第四届青训营 」笔记创作活动的的第2天 前端的发展、更新迭代是很快的，虽然入门容易，但是要一直走下去，就需要持续不断的学习。 1. CSS概念1. 定义Cascading Style Sheets  — 层叠样式表   用来定义页面元素的样式   设置字体和颜色 设置位置和大小 添加动画效果  2. 代码结构1234h1&amp;#123;    color: whi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解CSS | 青训营笔记">
+<meta property="og:url" content="http://example.com/2022/07/25/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3CSS/index.html">
+<meta property="og:site_name" content="柒楠de小窝">
+<meta property="og:description" content="理解CSS | 青训营笔记这是我参与「第四届青训营 」笔记创作活动的的第2天 前端的发展、更新迭代是很快的，虽然入门容易，但是要一直走下去，就需要持续不断的学习。 1. CSS概念1. 定义Cascading Style Sheets  — 层叠样式表   用来定义页面元素的样式   设置字体和颜色 设置位置和大小 添加动画效果  2. 代码结构1234h1&amp;#123;    color: whi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/default3.jpg">
+<meta property="article:published_time" content="2022-07-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-27T12:32:58.732Z">
+<meta property="article:author" content="qinan">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/default3.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/07/25/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3CSS/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '理解CSS | 青训营笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-07-27 20:32:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/default3.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">柒楠de小窝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">理解CSS | 青训营笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-24T16:00:00.000Z" title="发表于 2022-07-25 00:00:00">2022-07-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-27T12:32:58.732Z" title="更新于 2022-07-27 20:32:58">2022-07-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/">青训营学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="理解CSS | 青训营笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="理解CSS-青训营笔记"><a href="#理解CSS-青训营笔记" class="headerlink" title="理解CSS | 青训营笔记"></a>理解CSS | 青训营笔记</h1><p><strong>这是我参与「第四届青训营 」笔记创作活动的的第2天</strong></p>
+<p>前端的发展、更新迭代是很快的，虽然入门容易，但是要一直走下去，就需要持续不断的学习。</p>
+<h2 id="1-CSS概念"><a href="#1-CSS概念" class="headerlink" title="1. CSS概念"></a>1. CSS概念</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h3><p><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets  — 层叠样式表</p>
+<blockquote>
+<p> 用来定义页面元素的样式</p>
+</blockquote>
+<ol>
+<li>设置字体和颜色</li>
+<li>设置位置和大小</li>
+<li>添加动画效果</li>
+</ol>
+<h3 id="2-代码结构"><a href="#2-代码结构" class="headerlink" title="2. 代码结构"></a>2. 代码结构</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725162009178.png" alt="image-20220725162009178"></p>
+<h3 id="3-使用方式"><a href="#3-使用方式" class="headerlink" title="3. 使用方式"></a>3. 使用方式</h3><ol>
+<li><p>外链</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/css/style.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>嵌入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    *&#123;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">margin</span>:<span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">padding</span>:<span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">margin</span>: <span class="number">1em</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>内联</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;margin:1em 0&quot;</span>&gt;</span>Example Content<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="4-工作方式"><a href="#4-工作方式" class="headerlink" title="4. 工作方式"></a>4. 工作方式</h3><p>简单描述：在HTML加载后，解析是加载CSS并解析CSS，加样式添加在DOM树中，最后在页面中渲染出来</p>
+<h2 id="2-选择器-Selector"><a href="#2-选择器-Selector" class="headerlink" title="2. 选择器 Selector"></a>2. 选择器 Selector</h2><p>找出页面中的元素，给他们设置样式</p>
+<ol>
+<li><p>通配符选择器  <code>*</code></p>
+</li>
+<li><p>标签选择器 <code>p</code>、<code>li</code></p>
+</li>
+<li><p>id选择器 <code>#id_name</code></p>
+</li>
+<li><p>类选择器 <code>.class_name</code></p>
+</li>
+<li><p>属性选择器 <code>[disabled]</code> <code>input[type=&quot;password&quot;]</code></p>
+<ul>
+<li><p>可以匹配 <code>a[href^=&quot;#&quot;]</code> ， 匹配标签a的属性href的属性值以#开头</p>
+</li>
+<li><p><code>a[href$=&quot;.jpg&quot;]</code>, 匹配标签a的属性href的属性值以.jpg结尾</p>
+</li>
+</ul>
+</li>
+<li><p>伪类选择器</p>
+<ol>
+<li><p>状态伪类选择器</p>
+<p>元素出于某种状态下</p>
+<p><strong>关于链接：</strong></p>
+<p><code>a:link</code> 默认状态</p>
+<p><code>a:visited</code> 被访问过</p>
+<p><code>a:hover</code> 鼠标移动到链接时</p>
+<p><code>a:active</code> 鼠标按下</p>
+<p><strong>关于输入框：</strong></p>
+<p><code>input:focus</code> 输入框聚焦</p>
+</li>
+<li><p>结构伪类选择器</p>
+<p>根据dom节点在dom树出现的位置来选择元素，如<code>first-child</code>、<code>last-child</code>、<code>nth-child(n)</code>、<code>first-of-type</code>、<code>last-of-type</code>、<code>nth-of-type(n)</code></p>
+</li>
+</ol>
+</li>
+<li><p>伪元素选择器</p>
+<p>帮助我们利用css创建新标签元素，而不需要HTML标签，从而简化HTML结构,如 <code>::before</code>、<code>::after</code></p>
+</li>
+<li><p>组合（关系）选择器</p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725172515723.png" alt="image-20220725172515723"></p>
+</li>
+<li><p>选择器组</p>
+<p>不同的元素要使用相同的样式时，可以写在一起然后用逗号分隔开</p>
+</li>
+</ol>
+<h2 id="3-颜色"><a href="#3-颜色" class="headerlink" title="3. 颜色"></a>3. 颜色</h2><h3 id="1-使用RGB"><a href="#1-使用RGB" class="headerlink" title="1. 使用RGB"></a>1. 使用RGB</h3><p>Red， Green， Blue —  取值 0-255</p>
+<p>rgb(R，G，B)</p>
+<p>#RGB(使用16进制)</p>
+<h3 id="2-使用HSL"><a href="#2-使用HSL" class="headerlink" title="2. 使用HSL"></a>2. 使用HSL</h3><p>Hue — 色相，取值0-360</p>
+<p>Saturation — 饱和度, 取值0-100%</p>
+<p>Lightness — 亮度，取值0-100%</p>
+<p>hsl(H, S, L)</p>
+<h3 id="3-指定颜色值"><a href="#3-指定颜色值" class="headerlink" title="3. 指定颜色值"></a>3. 指定颜色值</h3><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725173654796.png" alt="image-20220725173654796"></p>
+<h3 id="4-透明度"><a href="#4-透明度" class="headerlink" title="4. 透明度"></a>4. 透明度</h3><p>alpha 取值0-1</p>
+<p>#rgba, raba(r,g,b,a), hsla(h,s,l,a)</p>
+<h2 id="4-字体"><a href="#4-字体" class="headerlink" title="4. 字体"></a>4. 字体</h2><h3 id="1-使用font-family设置"><a href="#1-使用font-family设置" class="headerlink" title="1. 使用font-family设置"></a>1. 使用<code>font-family</code>设置</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Optima, Georgia, serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>它的前面是指定的字体，最后面是<strong>通用字体族</strong></p>
+<p>一般font-family会有不止一个字体，因为网页会被不同的设备访问，不同的设备拥有的字体是有限，所以指定多个字体设备可以从前到后使用能用的字体。</p>
+<p><strong>通用字体族</strong>：Serif 衬线体；Sans-Serif 无衬线体；Cursive 手写体；Fantasy (夸张些的字体)；Monospace 等宽字体</p>
+<h3 id="2-使用-Web-Fonts"><a href="#2-使用-Web-Fonts" class="headerlink" title="2. 使用 Web Fonts"></a>2. 使用 Web Fonts</h3><p>就是将字体文件放在服务器上,会造成一些性能的开销</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span>&#123;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">&quot;Megrim&quot;</span>;</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">https://fonts.gstatic.com/s/mergrim/v11/46kulbz5WjvLqZVam_hVUdI1w.woff2</span>)<span class="built_in">format</span>(<span class="string">&#x27;woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>:Megrim, Cursive;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>适用于需要严格按照设计稿字体来制作网页时</p>
+<blockquote>
+<p>下面开始是对css的深入了解</p>
+</blockquote>
+<h2 id="5-css的继承"><a href="#5-css的继承" class="headerlink" title="5. css的继承"></a>5. css的继承</h2><p>某些属性会自动继承其父元素的计算值，除非显示的指定一个值</p>
+<blockquote>
+<p>一般来说，和文字相关的会继承，和盒模型相关的不会</p>
+</blockquote>
+<h3 id="显示继承"><a href="#显示继承" class="headerlink" title="显示继承"></a>显示继承</h3><p>通过<code>inherit</code>让不可继承的属性变成继承，比如想让<code>box-sizing</code>变成可继承的，那么可以</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: inherit;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*此时想让类名为some-widget和它里面的所有元素都用border-box,只需要如下操作*/</span></span><br><span class="line"><span class="selector-class">.some-widget</span>&#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始值"><a href="#初始值" class="headerlink" title="初始值"></a>初始值</h3><p>可以使用<code>initial</code>关键字显示重置为初始值</p>
+<p><code>background-color: initial</code></p>
+<h2 id="6-布局相关技术"><a href="#6-布局相关技术" class="headerlink" title="6. 布局相关技术"></a>6. 布局相关技术</h2><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725212127962.png" alt="image-20220725212127962"></p>
+<h3 id="常规流"><a href="#常规流" class="headerlink" title="常规流"></a>常规流</h3><h4 id="行级"><a href="#行级" class="headerlink" title="行级"></a>行级</h4><p>和其他行级并排，不能指定宽高（宽高由内容决定）</p>
+<p>如：span, em, strong, cite, code</p>
+<p><strong>行级排版上下文IFC</strong></p>
+<p><strong>I</strong>nline <strong>F</strong>ormatting <strong>C</strong>ontext</p>
+<blockquote>
+<p>只包含行级盒子的容器会创建一个IFC</p>
+</blockquote>
+<p>排版规则</p>
+<ul>
+<li>盒子在一行内水平摆放</li>
+<li>一行放不下，换行显示</li>
+<li>text-align 决定一行内盒子的水平对齐</li>
+<li>vertical-align 决定一个盒子在行内的垂直对齐</li>
+<li>避开浮动（float）元素</li>
+</ul>
+<h4 id="块级"><a href="#块级" class="headerlink" title="块级"></a>块级</h4><p>独占一行，不和其它元素并排</p>
+<p>如：body, article, div, main, section, h1-6, p, ul, li</p>
+<p><strong>块级排版上下文BFC</strong></p>
+<p><strong>B</strong>lock <strong>F</strong>ormatting <strong>C</strong>ontext</p>
+<blockquote>
+<p>某些容器会创建一个BFC, 如下</p>
+<ul>
+<li>根元素</li>
+<li>浮动、绝对定位，inline-block</li>
+<li>Flex子项 和 Grid 子项</li>
+<li>overflow 值 不为 visible 的块盒</li>
+<li>display: flow-root</li>
+</ul>
+</blockquote>
+<p>排版规则</p>
+<ul>
+<li>盒子从上到下摆放</li>
+<li>垂直 margin 合并</li>
+<li>BFC 内盒子的 margin 不会与外面的合并</li>
+<li>BFC 不会和浮动元素重叠</li>
+</ul>
+<h4 id="表格布局"><a href="#表格布局" class="headerlink" title="表格布局"></a>表格布局</h4><h4 id="FlexBox"><a href="#FlexBox" class="headerlink" title="FlexBox"></a>FlexBox</h4><blockquote>
+<p>弹性布局， 一种新的排版上下文</p>
+</blockquote>
+<p>可以控制子级盒子的</p>
+<ul>
+<li><p>摆放的流向，上下左右</p>
+</li>
+<li><p>摆放顺序</p>
+</li>
+<li><p>盒子宽度和高度</p>
+</li>
+<li><p>水平和垂直方向的对齐</p>
+<p><strong>主轴对齐  justify-content</strong> </p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725203821600.png" alt="image-20220725203821600"></p>
+<p><strong>侧轴对齐 align-items</strong></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725203854868.png" alt="image-20220725203854868"></p>
+</li>
+<li><p>是否允许换行</p>
+</li>
+</ul>
+<p>子级盒子的设置</p>
+<p><strong>Flex</strong>,可以设置子项的弹性，当容器有剩余空间时，会伸展；容器空间不够时，会收缩，里面包含三个属性</p>
+<p><code>flex-grow</code>: 有剩余空间时的伸展能力</p>
+<p><code>flex-shrink</code>: 容器空间不足时收缩的能力</p>
+<p><code>flex-basis</code>: 没有伸缩时的基础长度</p>
+<p><strong>一些缩写</strong></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725204614380.png" alt="image-20220725204614380"></p>
+<h4 id="Grid-布局"><a href="#Grid-布局" class="headerlink" title="Grid 布局"></a>Grid 布局</h4><p>相对于一维的flex来说，Grid就是二维的</p>
+<blockquote>
+<p>使用display: grid 使元素生成一个块级的 Grid 容器</p>
+</blockquote>
+<p>使用 <code>grid-template</code> 相关属性容器划分为网格，可以设置每一个子项占哪些行&#x2F;列</p>
+<p>举例：</p>
+<p>设置三列两行，第一二列宽100px, 第三列200px，第一二行100px</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>:<span class="number">100px</span> <span class="number">100px</span> <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>:<span class="number">100px</span> <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725205853715.png" alt="image-20220725205853715"></p>
+<p>设置三列两行，第一列宽100px, 第二三列占了剩余的，第一行100px</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>:<span class="number">100px</span> <span class="number">1</span>fr <span class="number">1</span>fr;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>:<span class="number">100px</span> <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725205836158.png" alt="image-20220725205836158"></p>
+<p><strong>grid line 网格线</strong></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220725210040229.png" alt="image-20220725210040229"></p>
+<p>设置子项占的区域</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="selector-class">.a</span>&#123;</span><br><span class="line">        <span class="attribute">grid-row-start</span>: <span class="number">1</span>;</span><br><span class="line">        <span class="attribute">grid-column-start</span>: <span class="number">1</span>;</span><br><span class="line">        <span class="attribute">grid-row-end</span>: <span class="number">3</span>;</span><br><span class="line">        <span class="attribute">grid-column-end</span>: <span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*以下是上面的简写方式，实现效果相同*/</span></span><br><span class="line">    <span class="selector-class">.a</span>&#123;</span><br><span class="line">        <span class="attribute">grid-area</span>: <span class="number">1</span>/<span class="number">1</span>/<span class="number">3</span>/<span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 基本上所有的布局都能通过 Grid 实现</p>
+</blockquote>
+<h3 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h3><p><code>float</code></p>
+<blockquote>
+<p>主要用于实现文字环绕图片的效果</p>
+</blockquote>
+<h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p><code>position</code></p>
+<p>属性值: <code>static</code> 默认值；<code>relative</code> 相对自身原本位置偏移，不脱离文档流；<code>absolute</code> 绝对定位，相对非<code>static</code> 祖先元素定位；<code>fixed</code> 相对于视口绝对定位</p>
+<h2 id="7-学习css的几点建议"><a href="#7-学习css的几点建议" class="headerlink" title="7. 学习css的几点建议"></a>7. 学习css的几点建议</h2><ul>
+<li>充分利用 MDN 和 W3C </li>
+<li>保持好奇心，善用浏览器的开发者工具</li>
+<li>持续学习，CSS 新特性还在不断出现</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">qinan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/07/25/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3CSS/">http://example.com/2022/07/25/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3CSS/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">柒楠de小窝</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CSS/">CSS</a></div><div class="post_share"><div class="social-share" data-image="/img/default3.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/07/26/webpack/"><img class="prev-cover" src="/img/default7.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Webpack</div></div></a></div><div class="next-post pull-right"><a href="/2022/07/24/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E4%B8%8EHTML/"><img class="next-cover" src="/img/default5.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">前端与HTML | 青训营笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">qinan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/qinanm"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/qinanm" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wenmumu_qinan@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">this is my blog, 大部分内容首发在csdn</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%90%86%E8%A7%A3CSS-%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">理解CSS | 青训营笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-CSS%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">1. CSS概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 代码结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 工作方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%80%89%E6%8B%A9%E5%99%A8-Selector"><span class="toc-number">1.2.</span> <span class="toc-text">2. 选择器 Selector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%A2%9C%E8%89%B2"><span class="toc-number">1.3.</span> <span class="toc-text">3. 颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8RGB"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 使用RGB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8HSL"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 使用HSL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%8C%87%E5%AE%9A%E9%A2%9C%E8%89%B2%E5%80%BC"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 指定颜色值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 透明度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AD%97%E4%BD%93"><span class="toc-number">1.4.</span> <span class="toc-text">4. 字体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8font-family%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 使用font-family设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8-Web-Fonts"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 使用 Web Fonts</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-css%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-number">1.5.</span> <span class="toc-text">5. css的继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E7%BB%A7%E6%89%BF"><span class="toc-number">1.5.1.</span> <span class="toc-text">显示继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%80%BC"><span class="toc-number">1.5.2.</span> <span class="toc-text">初始值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%B8%83%E5%B1%80%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF"><span class="toc-number">1.6.</span> <span class="toc-text">6. 布局相关技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%84%E6%B5%81"><span class="toc-number">1.6.1.</span> <span class="toc-text">常规流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%8C%E7%BA%A7"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">行级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%97%E7%BA%A7"><span class="toc-number">1.6.1.2.</span> <span class="toc-text">块级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%B8%83%E5%B1%80"><span class="toc-number">1.6.1.3.</span> <span class="toc-text">表格布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#FlexBox"><span class="toc-number">1.6.1.4.</span> <span class="toc-text">FlexBox</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Grid-%E5%B8%83%E5%B1%80"><span class="toc-number">1.6.1.5.</span> <span class="toc-text">Grid 布局</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E5%8A%A8"><span class="toc-number">1.6.2.</span> <span class="toc-text">浮动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.6.3.</span> <span class="toc-text">绝对定位</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%AD%A6%E4%B9%A0css%E7%9A%84%E5%87%A0%E7%82%B9%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.7.</span> <span class="toc-text">7. 学习css的几点建议</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/27/template/template/" title="无题"><img src="/img/default2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/07/27/template/template/" title="无题">无题</a><time datetime="2022-07-27T13:03:35.517Z" title="发表于 2022-07-27 21:03:35">2022-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/27/%E6%8F%92%E4%BB%B6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9C%8B%E6%9D%BF/" title="无题"><img src="/img/default7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/07/27/%E6%8F%92%E4%BB%B6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9C%8B%E6%9D%BF/" title="无题">无题</a><time datetime="2022-07-27T12:18:39.756Z" title="发表于 2022-07-27 20:18:39">2022-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/27/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E8%B7%9F%E7%9D%80%E6%9C%88%E5%BD%B1%E5%AD%A6JacaScript/" title="跟着月影学JavaScript | 青训营笔记"><img src="/img/default6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="跟着月影学JavaScript | 青训营笔记"/></a><div class="content"><a class="title" href="/2022/07/27/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E8%B7%9F%E7%9D%80%E6%9C%88%E5%BD%B1%E5%AD%A6JacaScript/" title="跟着月影学JavaScript | 青训营笔记">跟着月影学JavaScript | 青训营笔记</a><time datetime="2022-07-26T16:00:00.000Z" title="发表于 2022-07-27 00:00:00">2022-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/26/webpack/" title="Webpack"><img src="/img/default7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Webpack"/></a><div class="content"><a class="title" href="/2022/07/26/webpack/" title="Webpack">Webpack</a><time datetime="2022-07-25T16:00:00.000Z" title="发表于 2022-07-26 00:00:00">2022-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/25/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3CSS/" title="理解CSS | 青训营笔记"><img src="/img/default3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解CSS | 青训营笔记"/></a><div class="content"><a class="title" href="/2022/07/25/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3CSS/" title="理解CSS | 青训营笔记">理解CSS | 青训营笔记</a><time datetime="2022-07-24T16:00:00.000Z" title="发表于 2022-07-25 00:00:00">2022-07-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By qinan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
