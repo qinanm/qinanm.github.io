@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>TypeScript | 青训营笔记 | 柒楠de小窝</title><meta name="keywords" content="ts"><meta name="author" content="qinan"><meta name="copyright" content="qinan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这是我参与「第四届青训营 」笔记创作活动的的第8天 前端的发展、更新迭代是很快的，虽然入门容易，但是要一直走下去，就需要持续不断的学习。只有勇于挑战自己舒适区外的东西，才能不断进步。 什么是TypeScript静态类型 可读性增强：基于语法解析TSDoc,ide增强 可维护性增强：在编译阶段暴露大部分错误多人合作的大型项目中，获得更好的稳定性和开发效率  JS的超集 包含于兼容所有JS特性，支持共">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript | 青训营笔记">
+<meta property="og:url" content="http://example.com/2022/08/05/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/TypeScript/index.html">
+<meta property="og:site_name" content="柒楠de小窝">
+<meta property="og:description" content="这是我参与「第四届青训营 」笔记创作活动的的第8天 前端的发展、更新迭代是很快的，虽然入门容易，但是要一直走下去，就需要持续不断的学习。只有勇于挑战自己舒适区外的东西，才能不断进步。 什么是TypeScript静态类型 可读性增强：基于语法解析TSDoc,ide增强 可维护性增强：在编译阶段暴露大部分错误多人合作的大型项目中，获得更好的稳定性和开发效率  JS的超集 包含于兼容所有JS特性，支持共">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/default6.jpg">
+<meta property="article:published_time" content="2022-08-05T05:11:47.000Z">
+<meta property="article:modified_time" content="2022-08-05T07:09:43.068Z">
+<meta property="article:author" content="qinan">
+<meta property="article:tag" content="ts">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/default6.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/08/05/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/TypeScript/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'TypeScript | 青训营笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-05 15:09:43'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">81</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">28</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/default6.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">柒楠de小窝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">TypeScript | 青训营笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-05T05:11:47.000Z" title="发表于 2022-08-05 13:11:47">2022-08-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-05T07:09:43.068Z" title="更新于 2022-08-05 15:09:43">2022-08-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ts/">ts</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="TypeScript | 青训营笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>这是我参与「第四届青训营 」笔记创作活动的的第8天</strong></p>
+<p>前端的发展、更新迭代是很快的，虽然入门容易，但是要一直走下去，就需要持续不断的学习。只有勇于挑战自己舒适区外的东西，才能不断进步。</p>
+<h2 id="什么是TypeScript"><a href="#什么是TypeScript" class="headerlink" title="什么是TypeScript"></a>什么是TypeScript</h2><h4 id="静态类型"><a href="#静态类型" class="headerlink" title="静态类型"></a>静态类型</h4><ul>
+<li>可读性增强：基于语法解析TSDoc,ide增强</li>
+<li>可维护性增强：在编译阶段暴露大部分错误<br>多人合作的大型项目中，获得更好的稳定性和开发效率</li>
+</ul>
+<h4 id="JS的超集"><a href="#JS的超集" class="headerlink" title="JS的超集"></a>JS的超集</h4><ul>
+<li>包含于兼容所有JS特性，支持共存</li>
+<li>支持渐进式引入和升级</li>
+</ul>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h3><h4 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h4><p>左边JS,右边TS</p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805132140302.png" alt="image-20220805132140302"></p>
+<h4 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型"></a>对象类型</h4><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805132325395.png" alt="image-20220805132325395"></p>
+<h4 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h4><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805132827729.png" alt="image-20220805132827729"></p>
+<h5 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h5><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805132941646.png" alt="image-20220805132941646"></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805133154398.png" alt="image-20220805133154398"></p>
+<h4 id="数组类型"><a href="#数组类型" class="headerlink" title="数组类型"></a>数组类型</h4><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805133356537.png" alt="image-20220805133356537"></p>
+<h4 id="TS补充类型"><a href="#TS补充类型" class="headerlink" title="TS补充类型"></a>TS补充类型</h4><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805133619971.png" alt="image-20220805133619971"></p>
+<h4 id="TS范型"><a href="#TS范型" class="headerlink" title="TS范型"></a>TS范型</h4><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805134134284.png" alt="image-20220805134134284"></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805134050518.png" alt="image-20220805134050518"></p>
+<h4 id="字符串，数字，字面量"><a href="#字符串，数字，字面量" class="headerlink" title="字符串，数字，字面量"></a>字符串，数字，字面量</h4><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805135732671.png" alt="image-20220805135732671"></p>
+<h3 id="高级类型"><a href="#高级类型" class="headerlink" title="高级类型"></a>高级类型</h3><h4 id="联合-x2F-交叉类型"><a href="#联合-x2F-交叉类型" class="headerlink" title="联合&#x2F;交叉类型"></a>联合&#x2F;交叉类型</h4><p>为书籍列表编写类型  —》 类型声明繁琐，存在较多重复</p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805140042668.png" alt="image-20220805140042668"></p>
+<ul>
+<li><p><strong>联合类型：IA | IB; 联合类型表示一个值可以使几种类型之一</strong></p>
+</li>
+<li><p><strong>交叉类型： IA &amp; IB; 多重类型叠加到一起称为一种类型，它包含了所需的所有类型的特性</strong></p>
+</li>
+</ul>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805140533665.png" alt="image-20220805140533665"></p>
+<h4 id="类型保护与类型守卫"><a href="#类型保护与类型守卫" class="headerlink" title="类型保护与类型守卫"></a>类型保护与类型守卫</h4><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805140855481.png" alt="image-20220805140855481"></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805141126144.png" alt="image-20220805141126144"></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805141205674.png" alt="image-20220805141205674"></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805141249140.png" alt="image-20220805141249140"></p>
+<h4 id="函数返回值类型"><a href="#函数返回值类型" class="headerlink" title="函数返回值类型"></a>函数返回值类型</h4><p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805143852275.png" alt="image-20220805143852275"></p>
+<p><img src="http://qinan-sources.oss-cn-guangzhou.aliyuncs.com/img/image-20220805144001470.png" alt="image-20220805144001470"></p>
+<h2 id="工程应用"><a href="#工程应用" class="headerlink" title="工程应用"></a>工程应用</h2><h3 id="浏览器Web"><a href="#浏览器Web" class="headerlink" title="浏览器Web"></a>浏览器Web</h3><ol>
+<li>配置[[webpack]] loader 相关配置</li>
+<li>配置 tsconfig.js 文件</li>
+<li>运行webpack启动 &#x2F; 打包</li>
+<li>loader 处理 ts 文件时，会进行编译与类型检查</li>
+</ol>
+<p>相关loader:</p>
+<ul>
+<li>awesome-typescript-loader</li>
+<li>babel-loader</li>
+</ul>
+<h3 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h3><p> 使用TSC编译</p>
+<ol>
+<li>安装Node 与 npm</li>
+<li>配置tsconfig.js 文件</li>
+<li>使用npm 安装 tsc</li>
+<li>使用 tsc 运行编译得到 js 文件</li>
+</ol>
+<p>code.ts —–&gt;(TSC)—–&gt;  code.js</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">qinan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/08/05/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/TypeScript/">http://example.com/2022/08/05/%E9%9D%92%E8%AE%AD%E8%90%A5%E5%AD%A6%E4%B9%A0/TypeScript/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">柒楠de小窝</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ts/">ts</a></div><div class="post_share"><div class="social-share" data-image="/img/default6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/08/05/%E9%9D%A2%E8%AF%95/%E6%AD%BB%E9%94%81/"><img class="prev-cover" src="/img/defoult1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">死锁</div></div></a></div><div class="next-post pull-right"><a href="/2022/08/05/%E9%9D%A2%E8%AF%95/CSS%E9%80%89%E6%8B%A9%E7%AC%A6%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E5%93%AA%E4%BA%9B%E5%B1%9E%E6%80%A7%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%EF%BC%9F/"><img class="next-cover" src="/img/default7.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS选择符有哪些？哪些属性可以继承？</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">qinan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">81</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">28</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/qinanm"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/qinanm" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wenmumu_qinan@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">this is my blog, 大部分内容首发在csdn</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFTypeScript"><span class="toc-number">1.</span> <span class="toc-text">什么是TypeScript</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">静态类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JS%E7%9A%84%E8%B6%85%E9%9B%86"><span class="toc-number">1.0.2.</span> <span class="toc-text">JS的超集</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text">基础数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">简单数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.2.</span> <span class="toc-text">对象类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.3.</span> <span class="toc-text">函数类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">函数重载</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.4.</span> <span class="toc-text">数组类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TS%E8%A1%A5%E5%85%85%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.5.</span> <span class="toc-text">TS补充类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TS%E8%8C%83%E5%9E%8B"><span class="toc-number">2.1.6.</span> <span class="toc-text">TS范型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E6%95%B0%E5%AD%97%EF%BC%8C%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">2.1.7.</span> <span class="toc-text">字符串，数字，字面量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">高级类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E5%90%88-x2F-%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.1.</span> <span class="toc-text">联合&#x2F;交叉类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E4%BF%9D%E6%8A%A4%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%AE%88%E5%8D%AB"><span class="toc-number">2.2.2.</span> <span class="toc-text">类型保护与类型守卫</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.3.</span> <span class="toc-text">函数返回值类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">工程应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8Web"><span class="toc-number">3.1.</span> <span class="toc-text">浏览器Web</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NodeJs"><span class="toc-number">3.2.</span> <span class="toc-text">NodeJs</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/08/19/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/HTML/" title="HTML整体复习"><img src="/img/default6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML整体复习"/></a><div class="content"><a class="title" href="/2022/08/19/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/HTML/" title="HTML整体复习">HTML整体复习</a><time datetime="2022-08-19T08:07:12.000Z" title="发表于 2022-08-19 16:07:12">2022-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/19/%E7%AE%97%E6%B3%95/%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/" title="合并区间"><img src="/img/default5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="合并区间"/></a><div class="content"><a class="title" href="/2022/08/19/%E7%AE%97%E6%B3%95/%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/" title="合并区间">合并区间</a><time datetime="2022-08-19T01:10:48.000Z" title="发表于 2022-08-19 09:10:48">2022-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/18/%E9%9D%A2%E8%AF%95/cookie,sessionStorage,localStorage%E5%8C%BA%E5%88%AB/" title="cookie,sessionStorage,localStorage区别"><img src="/img/default6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cookie,sessionStorage,localStorage区别"/></a><div class="content"><a class="title" href="/2022/08/18/%E9%9D%A2%E8%AF%95/cookie,sessionStorage,localStorage%E5%8C%BA%E5%88%AB/" title="cookie,sessionStorage,localStorage区别">cookie,sessionStorage,localStorage区别</a><time datetime="2022-08-18T09:06:32.000Z" title="发表于 2022-08-18 17:06:32">2022-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/18/%E7%AE%97%E6%B3%95/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E7%9A%84%E6%95%B0%E7%BB%84/" title="合并两个有序的数组"><img src="/img/default3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="合并两个有序的数组"/></a><div class="content"><a class="title" href="/2022/08/18/%E7%AE%97%E6%B3%95/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E7%9A%84%E6%95%B0%E7%BB%84/" title="合并两个有序的数组">合并两个有序的数组</a><time datetime="2022-08-18T02:18:45.000Z" title="发表于 2022-08-18 10:18:45">2022-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/18/%E7%AE%97%E6%B3%95/%E5%A4%A7%E6%95%B0%E5%8A%A0%E6%B3%95/" title="大数加法"><img src="/img/default2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大数加法"/></a><div class="content"><a class="title" href="/2022/08/18/%E7%AE%97%E6%B3%95/%E5%A4%A7%E6%95%B0%E5%8A%A0%E6%B3%95/" title="大数加法">大数加法</a><time datetime="2022-08-18T00:55:31.000Z" title="发表于 2022-08-18 08:55:31">2022-08-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By qinan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
